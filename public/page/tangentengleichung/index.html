@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Das Newton-Verfahren</title>
+
+  <meta name="author" content="Jürgen Klein" />
+  
+  
+  <meta name="description" content="Zunächst wird allgemein die Tangentengleichung an einer beliebigen Stelle an einem Funktionsgraphen aufgestellt. Dann wird das Newton-Verfahren erklärt. Das Newton-Verfahren ist ein Iterationsverfahren, d.h. ein Näherungsverfahren, das schrittweise durchgeführt wird. Es dient zur Bestimmung von Nullstellen.">
+  
+
+  <meta name="generator" content="Hugo 0.16-DEV" />
+
+  <link rel="alternate" href="http://username.github.io/index.xml" type="application/rss+xml" title="makeitso.de">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://username.github.iocss/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://username.github.iocss/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://username.github.iocss/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="Das Newton-Verfahren" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://username.github.io">makeitso.de</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+          <a title="Blog" href="/">Blog</a>
+  	      </li>
+  	    
+      
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Page</a>
+            <div class="navlinks-children">
+            
+              <a href="/page/about/">About me</a>
+            
+              <a href="/page/tangentengleichung/">Das Newton-Verfahren</a>
+            
+            </div>
+          </li>
+        
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Das Newton-Verfahren</h1>
+      
+        
+            <hr class="small">
+            <span class="page-subheading">oder wie man eine Tangentengleichung aufstellt</span>
+      
+      
+      
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div id="toc" class="toc">
+<div id="toctitle">Inhaltsverzeichnis</div>
+<ul class="sectlevel1">
+<li><a href="#_aufstellen_der_tangentengleichung">Aufstellen der Tangentengleichung</a></li>
+<li><a href="#_erklärung_des_newton_verfahrens">Erklärung des Newton-Verfahrens</a></li>
+<li><a href="#_herleitung_der_iterationsformel">Herleitung der Iterationsformel</a></li>
+<li><a href="#_beispielaufgabe">Beispielaufgabe</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_aufstellen_der_tangentengleichung">Aufstellen der Tangentengleichung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wir wollen die Gleichung der Tangente \(g(x)\) an der Stelle \(x_0\) am Graphen einer
+Funktion \(f\) bestimmen.</p>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="./images//geradengleichung.png" alt="Tangente" width="400" height="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Die Tangente ist eine Gerade, also hat die Tangentengleichung die Form
+\[g(x)=m\cdot x+t\]
+Die Steigung der Tangente ist der Wert der Ableitung an der betrachteten Stelle:
+\[m=f'(x_0)\]
+Also sieht die Tangentengleichung so aus:
+\[g(x)=f'(x_0)\cdot x +t\]
+Jetzt fehlt nur noch der \(y\)-Achsenabschnitt \(t\):
+Da die Tangente den Funktionsgraphen im Punkt \(P(x_0|f(x_0)\) berührt (oder durchdringt) sind
+dort die \(y\)-Werte gleich:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{eqnarray}
+f(x_0)&amp;=&amp; g(x_0)\\
+      &amp;=&amp; f'(x_0)\cdot x_0 +t
+\end{eqnarray}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Auflösen nach \(t\) ergibt:</p>
+</div>
+<div class="paragraph">
+<p>\[t=f(x_0)-f'(x_0)\cdot x_0\]
+Damit folgt für die Tangentengleichung \(g(x)\):</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{align}
+g(x)=&amp;f'(x_0)\cdot x +t\\
+    =&amp;f'(x_0)\cdot x +f(x_0)-f'(x_0)\cdot x_0\ \\
+    =&amp;f'(x_0)(x-x_0)+f(x_0)
+\end{align}\]
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erklärung_des_newton_verfahrens">Erklärung des Newton-Verfahrens</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wie mit Hilfe von Tangenten ein Näherungswert für eine Nullstelle einer Funktion \(f\) bestimmt werden kann,
+wird unten in dem geogebra-Applet gezeigt. Sehen Sie sich die einzelnen Schritte zunächst an, indem Sie den <strong>weiter</strong>-Button drücken.</p>
+</div>
+<iframe scrolling="no" src="https://tube.geogebra.org/material/iframe/id/274649/width/600/height/400/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5" width="600px" height="400px" style="border:0px;"> </iframe>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Was wird also hier gemacht?</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Graph der Funktion \(f\)</p>
+</li>
+<li>
+<p>Startwert \(S_0\) auf der \(x\)-Achse</p>
+</li>
+<li>
+<p>Zugehöriger Punkt \(P_0\) auf dem Funktionsgraphen</p>
+</li>
+<li>
+<p>also: \(x_0\) wurde gewählt</p>
+</li>
+<li>
+<p>Tangentengleichung \(t_0\) wird an den Funktionsgraphen im Punkt \(P_0\) bestimmt</p>
+</li>
+<li>
+<p>Schnittpunkt von \(t_0\) und \(x\)-Achse wird bestimmt, also die Nullstelle von \(t_0\)</p>
+</li>
+<li>
+<p>das ergibt den nächsten Startwert \(x_1\)</p>
+</li>
+<li>
+<p>\(P_1\)</p>
+</li>
+<li>
+<p>Tangente</p>
+</li>
+<li>
+<p>usw.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_herleitung_der_iterationsformel">Herleitung der Iterationsformel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zum Schluss bleibt noch die leidige Rechenarbeit. Alles was dazu benötigt wird,
+beschränkt sich aber auf das <a href="#Aufstellen der Tangentegleichung">[Aufstellen der Tangentegleichung]</a> und das Berechnen
+der Nullstelle einer linearen Funktion, also der Nullstelle der jeweiligen Tangente.</p>
+</div>
+<div class="paragraph">
+<p>Also, Ärmel hoch und los!
+Wir suchen die Nullstelle der Tangentengleichung \(t_0\):
+\[t_0(x)=f'(x_0)(x-x_0)+f(x_0)\]
+Wie im Applet zu sehen ist, soll diese Nullstelle den Namen \(x_1\) haben.</p>
+</div>
+<div class="paragraph">
+<p>Einsetzen, null setzen und hinschreiben:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{align}
+t_0(x_1) &amp; = 0\\
+f'(x_0)(x_1-x_0)+f(x_0) &amp; = 0\\
+\end{align}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Auflösen nach \(x_1\):</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{align}
+f'(x_0)(x_1-x_0)+f(x_0) &amp; = 0 			&amp;|&amp;-f(x_0)\\
+f'(x_0)(x_1-x_0) &amp; = -f(x_0)  			&amp;|&amp;:f'(x_0)\\
+(x_1-x_0) &amp; = \frac{-f(x_0)}{f'(x_0)} 	&amp;|&amp;+x_0\\ \\
+x_1 &amp; =x_0 - \frac{f(x_0)}{f'(x_0)} &amp; &amp;
+\end{align}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Und jetzt beginnt die Iteration:<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>Der neue Startwert ist \(x_1\) und wir berechnen damit \(x_2\):
+\[x_2  =x_1 - \frac{f(x_1)}{f'(x_1)}\]
+Mit \(x_2\) wird dann \(x_3\) und so weiter berechnet, allgemein gilt dann:
+\[x_{n+1}  =x_n - \frac{f(x_n)}{f'(x_n)}\]
+Mit dieser Iterationsformel kann man also immer einen Schritt weiter rechnen, bei dem das Ergebnis
+(leider nur unter bestimmten Umständen <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>) immer genauer wird.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beispielaufgabe">Beispielaufgabe</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Gegeben sei die Funktion \(f(x)=\frac{1}{3}x^3+x-1\). Die Funktion hat nur eine Nullstelle (warum?).
+Ermitteln Sie die Nullstelle der Funtion \(f\) auf tausendstel genau mit dem Newton-Verfahren.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Lösung:</p>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="./images//newton-bsp.png" alt="Tangente" width="200" height="200"></span></p>
+</div>
+<div class="paragraph">
+<p>Zunächst wird \(f'\) bestimmt:
+\(f'(x)= x^2+1\)</p>
+</div>
+<div class="paragraph">
+<p>Wir wählen den Startwert \(x_0=1\).</p>
+</div>
+<div class="paragraph">
+<p>\(x_1 =x_0 - \frac{f(x_0)}{f'(x_0)}=1-\frac{\frac{1}{3}}{2}=0,833333...\)</p>
+</div>
+<div class="paragraph">
+<p>\(x_2 =x_1 - \frac{f(x_1)}{f'(x_1)}=0,81785...\)</p>
+</div>
+<div class="paragraph">
+<p>\(x_3 =x_2 - \frac{f(x_2)}{f'(x_2)}=0,81773...\)</p>
+</div>
+<div class="paragraph">
+<p>\(x_4 = 0,81773...\)</p>
+</div>
+<div class="paragraph">
+<p>Bei den zehntausendsteln ändert sich nichts mehr, also ist das Ergebnis genau genug und wir erhalten als
+Näherungswert für die Nullstelle:
+\[x\approx 0,818\]</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. Iteration: Wiederholung des gleichen Verfahrens zur Annäherung der Lösung an das tatsächliche Ergebnis
+</div>
+<div class="footnote" id="_footnote_2">
+<a href="#_footnoteref_2">2</a>. das interessiert uns jetzt aber nicht
+</div>
+</div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+		      
+		      
+          <li>
+            <a href="mailto:jklein@makeitso.de" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://username.github.ioindex.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Jürgen Klein
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://username.github.io">makeitso.de</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://username.github.iojs/jquery-1.11.2.min.js"></script>
+<script src="http://username.github.iojs/bootstrap.min.js"></script>
+<script src="http://username.github.iojs/main.js"></script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </body>
+</html>

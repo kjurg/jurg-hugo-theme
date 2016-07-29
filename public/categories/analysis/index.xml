@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analysis on makeitso.de</title>
+    <link>http://username.github.io/categories/analysis/</link>
+    <description>Recent content in Analysis on makeitso.de</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jklein@makeitso.de (Jürgen Klein)</managingEditor>
+    <webMaster>jklein@makeitso.de (Jürgen Klein)</webMaster>
+    <atom:link href="http://username.github.io/categories/analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Das Newton-Verfahren</title>
+      <link>http://username.github.io/page/tangentengleichung/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>jklein@makeitso.de (Jürgen Klein)</author>
+      <guid>http://username.github.io/page/tangentengleichung/</guid>
+      <description>&lt;div id=&#34;toc&#34; class=&#34;toc&#34;&gt;
+&lt;div id=&#34;toctitle&#34;&gt;Inhaltsverzeichnis&lt;/div&gt;
+&lt;ul class=&#34;sectlevel1&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;#_aufstellen_der_tangentengleichung&#34;&gt;Aufstellen der Tangentengleichung&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_erklärung_des_newton_verfahrens&#34;&gt;Erklärung des Newton-Verfahrens&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_herleitung_der_iterationsformel&#34;&gt;Herleitung der Iterationsformel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_beispielaufgabe&#34;&gt;Beispielaufgabe&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_aufstellen_der_tangentengleichung&#34;&gt;Aufstellen der Tangentengleichung&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Wir wollen die Gleichung der Tangente \(g(x)\) an der Stelle \(x_0\) am Graphen einer
+Funktion \(f\) bestimmen.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;image right&#34;&gt;&lt;img src=&#34;./images//geradengleichung.png&#34; alt=&#34;Tangente&#34; width=&#34;400&#34; height=&#34;400&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Die Tangente ist eine Gerade, also hat die Tangentengleichung die Form
+\[g(x)=m\cdot x+t\]
+Die Steigung der Tangente ist der Wert der Ableitung an der betrachteten Stelle:
+\[m=f&#39;(x_0)\]
+Also sieht die Tangentengleichung so aus:
+\[g(x)=f&#39;(x_0)\cdot x +t\]
+Jetzt fehlt nur noch der \(y\)-Achsenabschnitt \(t\):
+Da die Tangente den Funktionsgraphen im Punkt \(P(x_0|f(x_0)\) berührt (oder durchdringt) sind
+dort die \(y\)-Werte gleich:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{eqnarray}
+f(x_0)&amp;amp;=&amp;amp; g(x_0)\\
+      &amp;amp;=&amp;amp; f&#39;(x_0)\cdot x_0 +t
+\end{eqnarray}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Auflösen nach \(t\) ergibt:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;\[t=f(x_0)-f&#39;(x_0)\cdot x_0\]
+Damit folgt für die Tangentengleichung \(g(x)\):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{align}
+g(x)=&amp;amp;f&#39;(x_0)\cdot x +t\\
+    =&amp;amp;f&#39;(x_0)\cdot x +f(x_0)-f&#39;(x_0)\cdot x_0\ \\
+    =&amp;amp;f&#39;(x_0)(x-x_0)+f(x_0)
+\end{align}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_erklärung_des_newton_verfahrens&#34;&gt;Erklärung des Newton-Verfahrens&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Wie mit Hilfe von Tangenten ein Näherungswert für eine Nullstelle einer Funktion \(f\) bestimmt werden kann,
+wird unten in dem geogebra-Applet gezeigt. Sehen Sie sich die einzelnen Schritte zunächst an, indem Sie den &lt;strong&gt;weiter&lt;/strong&gt;-Button drücken.&lt;/p&gt;
+&lt;/div&gt;
+&lt;iframe scrolling=&#34;no&#34; src=&#34;https://tube.geogebra.org/material/iframe/id/274649/width/600/height/400/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5&#34; width=&#34;600px&#34; height=&#34;400px&#34; style=&#34;border:0px;&#34;&gt; &lt;/iframe&gt;
+&lt;div class=&#34;exampleblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Was wird also hier gemacht?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;olist arabic&#34;&gt;
+&lt;ol class=&#34;arabic&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Graph der Funktion \(f\)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Startwert \(S_0\) auf der \(x\)-Achse&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zugehöriger Punkt \(P_0\) auf dem Funktionsgraphen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;also: \(x_0\) wurde gewählt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tangentengleichung \(t_0\) wird an den Funktionsgraphen im Punkt \(P_0\) bestimmt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Schnittpunkt von \(t_0\) und \(x\)-Achse wird bestimmt, also die Nullstelle von \(t_0\)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;das ergibt den nächsten Startwert \(x_1\)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;\(P_1\)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tangente&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;usw.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_herleitung_der_iterationsformel&#34;&gt;Herleitung der Iterationsformel&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Zum Schluss bleibt noch die leidige Rechenarbeit. Alles was dazu benötigt wird,
+beschränkt sich aber auf das &lt;a href=&#34;#Aufstellen der Tangentegleichung&#34;&gt;[Aufstellen der Tangentegleichung]&lt;/a&gt; und das Berechnen
+der Nullstelle einer linearen Funktion, also der Nullstelle der jeweiligen Tangente.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Also, Ärmel hoch und los!
+Wir suchen die Nullstelle der Tangentengleichung \(t_0\):
+\[t_0(x)=f&#39;(x_0)(x-x_0)+f(x_0)\]
+Wie im Applet zu sehen ist, soll diese Nullstelle den Namen \(x_1\) haben.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Einsetzen, null setzen und hinschreiben:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{align}
+t_0(x_1) &amp;amp; = 0\\
+f&#39;(x_0)(x_1-x_0)+f(x_0) &amp;amp; = 0\\
+\end{align}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Auflösen nach \(x_1\):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{align}
+f&#39;(x_0)(x_1-x_0)+f(x_0) &amp;amp; = 0 			&amp;amp;|&amp;amp;-f(x_0)\\
+f&#39;(x_0)(x_1-x_0) &amp;amp; = -f(x_0)  			&amp;amp;|&amp;amp;:f&#39;(x_0)\\
+(x_1-x_0) &amp;amp; = \frac{-f(x_0)}{f&#39;(x_0)} 	&amp;amp;|&amp;amp;+x_0\\ \\
+x_1 &amp;amp; =x_0 - \frac{f(x_0)}{f&#39;(x_0)} &amp;amp; &amp;amp;
+\end{align}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Und jetzt beginnt die Iteration:&lt;sup class=&#34;footnote&#34;&gt;[&lt;a id=&#34;_footnoteref_1&#34; class=&#34;footnote&#34; href=&#34;#_footnote_1&#34; title=&#34;View footnote.&#34;&gt;1&lt;/a&gt;]&lt;/sup&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Der neue Startwert ist \(x_1\) und wir berechnen damit \(x_2\):
+\[x_2  =x_1 - \frac{f(x_1)}{f&#39;(x_1)}\]
+Mit \(x_2\) wird dann \(x_3\) und so weiter berechnet, allgemein gilt dann:
+\[x_{n+1}  =x_n - \frac{f(x_n)}{f&#39;(x_n)}\]
+Mit dieser Iterationsformel kann man also immer einen Schritt weiter rechnen, bei dem das Ergebnis
+(leider nur unter bestimmten Umständen &lt;sup class=&#34;footnote&#34;&gt;[&lt;a id=&#34;_footnoteref_2&#34; class=&#34;footnote&#34; href=&#34;#_footnote_2&#34; title=&#34;View footnote.&#34;&gt;2&lt;/a&gt;]&lt;/sup&gt;) immer genauer wird.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_beispielaufgabe&#34;&gt;Beispielaufgabe&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;exampleblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Gegeben sei die Funktion \(f(x)=\frac{1}{3}x^3+x-1\). Die Funktion hat nur eine Nullstelle (warum?).
+Ermitteln Sie die Nullstelle der Funtion \(f\) auf tausendstel genau mit dem Newton-Verfahren.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Lösung:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;image right&#34;&gt;&lt;img src=&#34;./images//newton-bsp.png&#34; alt=&#34;Tangente&#34; width=&#34;200&#34; height=&#34;200&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Zunächst wird \(f&#39;\) bestimmt:
+\(f&#39;(x)= x^2+1\)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Wir wählen den Startwert \(x_0=1\).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;\(x_1 =x_0 - \frac{f(x_0)}{f&#39;(x_0)}=1-\frac{\frac{1}{3}}{2}=0,833333...\)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;\(x_2 =x_1 - \frac{f(x_1)}{f&#39;(x_1)}=0,81785...\)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;\(x_3 =x_2 - \frac{f(x_2)}{f&#39;(x_2)}=0,81773...\)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;\(x_4 = 0,81773...\)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Bei den zehntausendsteln ändert sich nichts mehr, also ist das Ergebnis genau genug und wir erhalten als
+Näherungswert für die Nullstelle:
+\[x\approx 0,818\]&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;footnotes&#34;&gt;
+&lt;hr&gt;
+&lt;div class=&#34;footnote&#34; id=&#34;_footnote_1&#34;&gt;
+&lt;a href=&#34;#_footnoteref_1&#34;&gt;1&lt;/a&gt;. Iteration: Wiederholung des gleichen Verfahrens zur Annäherung der Lösung an das tatsächliche Ergebnis
+&lt;/div&gt;
+&lt;div class=&#34;footnote&#34; id=&#34;_footnote_2&#34;&gt;
+&lt;a href=&#34;#_footnoteref_2&#34;&gt;2&lt;/a&gt;. das interessiert uns jetzt aber nicht
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,145 @@
+---
+layout: page
+title: Das Newton-Verfahren
+subtitle: oder wie man eine Tangentengleichung aufstellt
+menu:
+  main:
+    parent: 'Page'
+    weight: 20
+tags: [ "Mathe" ]
+categories: [ "Analysis" ]
+description: "Zunächst wird allgemein die Tangentengleichung an einer beliebigen Stelle an einem Funktionsgraphen aufgestellt. Dann wird das Newton-Verfahren erklärt. Das Newton-Verfahren ist ein Iterationsverfahren, d.h. ein Näherungsverfahren, das schrittweise durchgeführt wird. Es dient zur Bestimmung von Nullstellen."
+---
+:imagesdir: ./images/
+:toc-title: Inhaltsverzeichnis
+:toc: right
+:stem: latexmath
+
+== Aufstellen der Tangentengleichung
+
+Wir wollen die Gleichung der Tangente stem:[g(x)] an der Stelle stem:[x_0] am Graphen einer
+Funktion stem:[f] bestimmen.
+
+image:geradengleichung.png[Tangente,400,400,role="right"]
+
+Die Tangente ist eine Gerade, also hat die Tangentengleichung die Form
+\[g(x)=m\cdot x+t\]
+Die Steigung der Tangente ist der Wert der Ableitung an der betrachteten Stelle:
+\[m=f'(x_0)\]
+Also sieht die Tangentengleichung so aus:
+\[g(x)=f'(x_0)\cdot x +t\]
+Jetzt fehlt nur noch der stem:[y]-Achsenabschnitt stem:[t]:
+Da die Tangente den Funktionsgraphen im Punkt stem:[P(x_0|f(x_0)] berührt (oder durchdringt) sind
+dort die stem:[y]-Werte gleich:
+
+[stem]
+++++
+\begin{eqnarray}
+f(x_0)&=& g(x_0)\\
+      &=& f'(x_0)\cdot x_0 +t
+\end{eqnarray}
+++++
+
+Auflösen nach stem:[t] ergibt:
+
+\[t=f(x_0)-f'(x_0)\cdot x_0\]
+Damit folgt für die Tangentengleichung stem:[g(x)]:
+[stem]
+++++
+\begin{align}
+g(x)=&f'(x_0)\cdot x +t\\
+    =&f'(x_0)\cdot x +f(x_0)-f'(x_0)\cdot x_0\ \\
+    =&f'(x_0)(x-x_0)+f(x_0)
+\end{align}
+++++
+
+== Erklärung des Newton-Verfahrens
+
+Wie mit Hilfe von Tangenten ein Näherungswert für eine Nullstelle einer Funktion stem:[f] bestimmt werden kann,
+wird unten in dem geogebra-Applet gezeigt. Sehen Sie sich die einzelnen Schritte zunächst an, indem Sie den *weiter*-Button drücken.
+++++
+<iframe scrolling="no" src="https://tube.geogebra.org/material/iframe/id/274649/width/600/height/400/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5" width="600px" height="400px" style="border:0px;"> </iframe>
+++++
+
+
+====
+Was wird also hier gemacht?
+
+. Graph der Funktion stem:[f]
+. Startwert stem:[S_0] auf der stem:[x]-Achse
+. Zugehöriger Punkt stem:[P_0] auf dem Funktionsgraphen
+. also: stem:[x_0] wurde gewählt
+. Tangentengleichung stem:[t_0] wird an den Funktionsgraphen im Punkt stem:[P_0] bestimmt
+. Schnittpunkt von stem:[t_0] und stem:[x]-Achse wird bestimmt, also die Nullstelle von stem:[t_0]
+. das ergibt den nächsten Startwert stem:[x_1]
+. stem:[P_1]
+. Tangente
+. usw.
+====
+
+== Herleitung der Iterationsformel 
+
+Zum Schluss bleibt noch die leidige Rechenarbeit. Alles was dazu benötigt wird,
+beschränkt sich aber auf das <<Aufstellen der Tangentegleichung>> und das Berechnen 
+der Nullstelle einer linearen Funktion, also der Nullstelle der jeweiligen Tangente.
+
+Also, Ärmel hoch und los!
+Wir suchen die Nullstelle der Tangentengleichung stem:[t_0]:
+\[t_0(x)=f'(x_0)(x-x_0)+f(x_0)\]
+Wie im Applet zu sehen ist, soll diese Nullstelle den Namen stem:[x_1] haben. 
+
+Einsetzen, null setzen und hinschreiben:
+[stem]
+++++
+\begin{align}
+t_0(x_1) & = 0\\
+f'(x_0)(x_1-x_0)+f(x_0) & = 0\\
+\end{align}
+++++
+Auflösen nach stem:[x_1]:
+[stem]
+++++
+\begin{align}
+f'(x_0)(x_1-x_0)+f(x_0) & = 0 			&|&-f(x_0)\\
+f'(x_0)(x_1-x_0) & = -f(x_0)  			&|&:f'(x_0)\\
+(x_1-x_0) & = \frac{-f(x_0)}{f'(x_0)} 	&|&+x_0\\ \\
+x_1 & =x_0 - \frac{f(x_0)}{f'(x_0)} & &
+\end{align}
+++++
+Und jetzt beginnt die Iteration:footnote:[Iteration: Wiederholung des gleichen Verfahrens zur Annäherung der Lösung an das tatsächliche Ergebnis]
+
+Der neue Startwert ist stem:[x_1] und wir berechnen damit stem:[x_2]:
+\[x_2  =x_1 - \frac{f(x_1)}{f'(x_1)}\]
+Mit stem:[x_2] wird dann stem:[x_3] und so weiter berechnet, allgemein gilt dann:
+\[x_{n+1}  =x_n - \frac{f(x_n)}{f'(x_n)}\]
+Mit dieser Iterationsformel kann man also immer einen Schritt weiter rechnen, bei dem das Ergebnis 
+(leider nur unter bestimmten Umständen footnote:[das interessiert uns jetzt aber nicht]) immer genauer wird.
+
+== Beispielaufgabe
+
+====
+Gegeben sei die Funktion stem:[f(x)=\frac{1}{3}x^3+x-1]. Die Funktion hat nur eine Nullstelle (warum?).
+Ermitteln Sie die Nullstelle der Funtion stem:[f] auf tausendstel genau mit dem Newton-Verfahren.
+====
+
+Lösung:
+
+image:newton-bsp.png[Tangente,200,200,role="right"]
+
+Zunächst wird stem:[f'] bestimmt:
+stem:[f'(x)= x^2+1]
+
+Wir wählen den Startwert stem:[x_0=1]. 
+
+stem:[x_1 =x_0 - \frac{f(x_0)}{f'(x_0)}=1-\frac{\frac{1}{3}}{2}=0,833333...]
+
+stem:[x_2 =x_1 - \frac{f(x_1)}{f'(x_1)}=0,81785...]
+
+stem:[x_3 =x_2 - \frac{f(x_2)}{f'(x_2)}=0,81773...]
+
+stem:[x_4 = 0,81773...]
+
+Bei den zehntausendsteln ändert sich nichts mehr, also ist das Ergebnis genau genug und wir erhalten als
+Näherungswert für die Nullstelle:
+\[x\approx 0,818\]
+

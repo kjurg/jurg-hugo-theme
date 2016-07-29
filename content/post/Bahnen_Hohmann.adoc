@@ -1,0 +1,131 @@
+---
+date: 2016-07-23
+layout: post
+title: Bahnen im Gravitationsfeld
+subtitle: und eine kleine Aufgabe dazu
+description: Die Geschwindigkeit auf einer Ellipsenbahn wird hergeleitet.
+tags: [ "Physik" ]
+categories: [ "Q12" ]
+
+---
+
+
+:data-uri:
+:imagesdir: ../images/
+:toc: right
+:toc-title: Inhaltsverzeichnis
+:stem: latexmath
+
+
+== Gesamtenergie einer Ellipsenbahn
+
+Für die Gesamtenergie stem:[E_{ges}] gilt:
+\[E_{ges}= E_{kin}+E_{pot}\]
+Die Gesamtenergie bleibt wegen der Energieerhaltung _erhalten_, also konstant.
+Die kinetische Energie und die potentielle Energie ändern sich ständig: Je näher ein Satellit der Zentralmasse ist, um so großer ist seine kinetische und umso kleiner seine potentielle Energie (und umgekehrt).
+Wir betrachten Aphel und Perihel:
+
+Perihel:
+[stem]
+++++
+{E_{ges}} = \frac{1}{2}m\cdot{v_P}^2 - \frac{{G \cdot {\rm{m}} \cdot {\rm{M}}}}{{{r_P}}}
+++++
+
+Aphel:
+[stem]
+++++
+{E_{ges}} = \frac{1}{2}m\cdot{v_A}^2 - \frac{{G \cdot {\rm{m}} \cdot {\rm{M}}}}{{{r_A}}}
+++++
+Die beiden Gleichungen werden jeweils mit stem:[{r_P}^2] bzw. stem:[{r_A}^2] multipliziert und dann voneinander abgezogen:
+[stem]
+++++
+E_{ges}({r_A}^2-{r_P}^2)=\frac{1}{2} m \left({v_A}^2 {r_A}^2-{v_P}^2 {r_P}^2\right)-G m M (r_A-r_P)
+++++
+Da stem:[{v_P} \cdot {r_P} = {v_A} \cdot {r_A} \Rightarrow \frac{1}{2}m \cdot {v_P}^2 \cdot {r_P}^2 = \frac{1}{2}m \cdot {v_A}^2 \cdot {r_A}^2] (folgt aus Kepler 2)
+folgt für die Gesamtenergie:
+[stem]
+++++
+\begin{align}
+{E_{ges}} &= - G \cdot m \cdot M \cdot \frac{{{r_A} - {r_P}}}{{{r_A}^2 - {r_P}^2}}\\
+&= - \frac{{G \cdot m \cdot M}}{{{r_A} + {r_P}}}\\
+&= - \frac{{G \cdot m \cdot M}}{{2a}}
+\end{align}
+++++
+Damit ergibt sich für die Bahngeschwindigkeit eines Satelliten auf einer Ellipsenbahn im Abstand stem:[r]:
+[stem]
+++++
+\begin{align}
+E_{kin}&=E_{ges}-E_{pot}\\
+\frac{1}{2}m{v^2} &=  - \frac{{G \cdot m \cdot M}}{{2a}}+\frac{{G \cdot m \cdot M}}{r} \\
+\Rightarrow  v &= \sqrt {2GM \cdot \left( {\frac{1}{r} - \frac{1}{{2a}}} \right)}
+\end{align}
+++++
+
+=== Aufgabe (Abi 2010)
+
+Am 27. Februar 2004 wurde von der European Space Agency (ESA) die Sonde Rosetta gestartet. Sie wird im Jahr 2014 den Kometen Tschurjumov- Gerasimenko erreichen. Rosetta soll den Kometenkern, der die Masse stem:[m_{TG} = 3,35 \cdot 10^{13} {\rm \,kg}] hat, auf einer kreisförmigen Bahn mit Radius stem:[r = 3 {\rm \,km}] umrunden und auf ihm einen Lander der Masse stem:[m_L = 100 {\rm \,kg}] absetzen. Für die Bahn des Kometen Tschurjumov-Gerasimenko um die Sonne gelten die folgenden Daten: Umlaufzeit T = 6,56 a; numerische Exzentrizität ε = 0,60.
+
+. 	Berechnen Sie die Länge a der großen Halbachse sowie die Apheldistanz stem:[r_A] und die Periheldistanz stem:[r_P] der Kometenbahn.
+. 	Berechnen Sie die Bahngeschwindigkeit stem:[v_P] des Kometen Tschurjumov- Gerasimenko im Perihel und begründen Sie, warum diese deutlich größer als die Aphelgeschwindigkeit ist. 
+. 	Berechnen Sie die Umlaufdauer stem:[T_R] von Rosetta um den Kometen.
+
+=== Lösung
+
+====
+(1) Kepler 3:
+
+[stem]
+++++
+\begin{align}
+\frac{T_{TG}^2}{a_{TG}^3} &= \frac{T_E^2}{a_E^3}\\
+\Rightarrow a_{TG} &= \sqrt[3]{ \frac{T_{TG}^2}{T_E^2} } \cdot a_E \\
+\Rightarrow a_{TG} &= \sqrt[3]{ \frac{(6,56a)^2}{(1a)^2} } \cdot 1AE = 3,50 AE
+\end{align}
+++++
+
+* Aphel:
+[stem]
+++++
+\begin{align}
+r_A &= (1 + \epsilon) \cdot a_{TG} \\ & = (1 + 0,60) \cdot 3,50 AE = 5,60 AE
+\end{align}
+++++
+
+* Perihel:
+[stem]
+++++
+ \begin{align}
+ r_P &= (1 - \epsilon) \cdot a_{TG} \\ &= (1 - 0,60) \cdot 3,50 AE = 1,40 AE
+ \end{align}
+++++
+====
+
+====
+(2) Bahngeschwindigkeit:
+
+[stem]
+++++
+\begin{array}{I} v &= \sqrt{ G \cdot M \cdot \left( \frac{2}{r_P} - \frac{1}{a} \right) } \\ 
+	 	   &= \sqrt{6,67 \cdot 10^{-11} \frac{m^3}{kg \, s^2} \cdot 1,98 \cdot 10^{30} kg} \cdot \\
+		&	\cdot \sqrt{\left( \frac{2}{1,4 \cdot 1,5 \cdot 10^{11} m} - \frac{1}{3,5 \cdot 1,5 \cdot 10^{11} m} \right) } \\ 
+		   &= 31 \cdot 10^3 \frac{m}{s} \end{array}
+++++
+
+Begründung: 
+
+* Kepler 2: Wegen des kleineren Abstands (Perihel) muss die Geschwindigkeit größer sein. 
+* Oder Energieerhaltung: Wir setzen stem:[E_{pot}(r\to\infty)=0], im Unendlichen hat ein Körper keine potentielle Energie, die Gesamtenergie im Unendlichen ist nur noch die kinetische Energie. Bei der Annäherung an eine Masse wird der Körper angezogen und damit beschleunigt. Damit erhöht sich die kinetische Energie, die potentielle nimmt ab. Folglich muss die Geschwindigkeit im Perihel (nah an der Zentalmasse) am höchsten sein und umgekehrt.
+====
+
+====
+(3) Umlaufzeit:
+[stem]
+++++
+\begin{align}
+\frac{T_R^2}{r_R^3} &= \frac{4 \pi^2}{G \cdot m_{TG}} \\
+\Rightarrow T_R &= \sqrt{ \frac{4 \pi^2 \cdot r_R^3}{G \cdot m_{TG}} } \\
+& = \sqrt { \frac{4 \pi^2 \cdot (3000m)^3}{6,67 \cdot 10^{-11} \frac{m^3}{kg \, s^2} \cdot 3,35 \cdot 10^{13} kg} }\\
+& = 21800 s = 6,0 h
+\end{align}
+++++
+====

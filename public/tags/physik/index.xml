@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Physik on makeitso.de</title>
+    <link>http://username.github.io/tags/physik/</link>
+    <description>Recent content in Physik on makeitso.de</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jklein@makeitso.de (Jürgen Klein)</managingEditor>
+    <webMaster>jklein@makeitso.de (Jürgen Klein)</webMaster>
+    <lastBuildDate>Sat, 23 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://username.github.io/tags/physik/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bahnen im Gravitationsfeld</title>
+      <link>http://username.github.io/post/Bahnen_Hohmann/</link>
+      <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
+      <author>jklein@makeitso.de (Jürgen Klein)</author>
+      <guid>http://username.github.io/post/Bahnen_Hohmann/</guid>
+      <description>&lt;div id=&#34;toc&#34; class=&#34;toc&#34;&gt;
+&lt;div id=&#34;toctitle&#34;&gt;Inhaltsverzeichnis&lt;/div&gt;
+&lt;ul class=&#34;sectlevel1&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;#_gesamtenergie_einer_ellipsenbahn&#34;&gt;Gesamtenergie einer Ellipsenbahn&lt;/a&gt;
+&lt;ul class=&#34;sectlevel2&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;#_aufgabe_abi_2010&#34;&gt;Aufgabe (Abi 2010)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_lösung&#34;&gt;Lösung&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_gesamtenergie_einer_ellipsenbahn&#34;&gt;Gesamtenergie einer Ellipsenbahn&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Für die Gesamtenergie \(E_{ges}\) gilt:
+\[E_{ges}= E_{kin}+E_{pot}\]
+Die Gesamtenergie bleibt wegen der Energieerhaltung &lt;em&gt;erhalten&lt;/em&gt;, also konstant.
+Die kinetische Energie und die potentielle Energie ändern sich ständig: Je näher ein Satellit der Zentralmasse ist, um so großer ist seine kinetische und umso kleiner seine potentielle Energie (und umgekehrt).
+Wir betrachten Aphel und Perihel:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Perihel:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[{E_{ges}} = \frac{1}{2}m\cdot{v_P}^2 - \frac{{G \cdot {\rm{m}} \cdot {\rm{M}}}}{{{r_P}}}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Aphel:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[{E_{ges}} = \frac{1}{2}m\cdot{v_A}^2 - \frac{{G \cdot {\rm{m}} \cdot {\rm{M}}}}{{{r_A}}}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Die beiden Gleichungen werden jeweils mit \({r_P}^2\) bzw. \({r_A}^2\) multipliziert und dann voneinander abgezogen:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[E_{ges}({r_A}^2-{r_P}^2)=\frac{1}{2} m \left({v_A}^2 {r_A}^2-{v_P}^2 {r_P}^2\right)-G m M (r_A-r_P)\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Da \({v_P} \cdot {r_P} = {v_A} \cdot {r_A} \Rightarrow \frac{1}{2}m \cdot {v_P}^2 \cdot {r_P}^2 = \frac{1}{2}m \cdot {v_A}^2 \cdot {r_A}^2\) (folgt aus Kepler 2)
+folgt für die Gesamtenergie:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{align}
+{E_{ges}} &amp;amp;= - G \cdot m \cdot M \cdot \frac{{{r_A} - {r_P}}}{{{r_A}^2 - {r_P}^2}}\\
+&amp;amp;= - \frac{{G \cdot m \cdot M}}{{{r_A} + {r_P}}}\\
+&amp;amp;= - \frac{{G \cdot m \cdot M}}{{2a}}
+\end{align}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Damit ergibt sich für die Bahngeschwindigkeit eines Satelliten auf einer Ellipsenbahn im Abstand \(r\):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{align}
+E_{kin}&amp;amp;=E_{ges}-E_{pot}\\
+\frac{1}{2}m{v^2} &amp;amp;=  - \frac{{G \cdot m \cdot M}}{{2a}}+\frac{{G \cdot m \cdot M}}{r} \\
+\Rightarrow  v &amp;amp;= \sqrt {2GM \cdot \left( {\frac{1}{r} - \frac{1}{{2a}}} \right)}
+\end{align}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_aufgabe_abi_2010&#34;&gt;Aufgabe (Abi 2010)&lt;/h3&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Am 27. Februar 2004 wurde von der European Space Agency (ESA) die Sonde Rosetta gestartet. Sie wird im Jahr 2014 den Kometen Tschurjumov- Gerasimenko erreichen. Rosetta soll den Kometenkern, der die Masse \(m_{TG} = 3,35 \cdot 10^{13} {\rm \,kg}\) hat, auf einer kreisförmigen Bahn mit Radius \(r = 3 {\rm \,km}\) umrunden und auf ihm einen Lander der Masse \(m_L = 100 {\rm \,kg}\) absetzen. Für die Bahn des Kometen Tschurjumov-Gerasimenko um die Sonne gelten die folgenden Daten: Umlaufzeit T = 6,56 a; numerische Exzentrizität ε = 0,60.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;olist arabic&#34;&gt;
+&lt;ol class=&#34;arabic&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Berechnen Sie die Länge a der großen Halbachse sowie die Apheldistanz \(r_A\) und die Periheldistanz \(r_P\) der Kometenbahn.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Berechnen Sie die Bahngeschwindigkeit \(v_P\) des Kometen Tschurjumov- Gerasimenko im Perihel und begründen Sie, warum diese deutlich größer als die Aphelgeschwindigkeit ist.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Berechnen Sie die Umlaufdauer \(T_R\) von Rosetta um den Kometen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_lösung&#34;&gt;Lösung&lt;/h3&gt;
+&lt;div class=&#34;exampleblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;(1) Kepler 3:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{align}
+\frac{T_{TG}^2}{a_{TG}^3} &amp;amp;= \frac{T_E^2}{a_E^3}\\
+\Rightarrow a_{TG} &amp;amp;= \sqrt[3]{ \frac{T_{TG}^2}{T_E^2} } \cdot a_E \\
+\Rightarrow a_{TG} &amp;amp;= \sqrt[3]{ \frac{(6,56a)^2}{(1a)^2} } \cdot 1AE = 3,50 AE
+\end{align}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Aphel:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+\begin{align}
+r_A &amp;= (1 + \epsilon) \cdot a_{TG} \\ &amp; = (1 + 0,60) \cdot 3,50 AE = 5,60 AE
+\end{align}
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Perihel:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+ \begin{align}
+ r_P &amp;= (1 - \epsilon) \cdot a_{TG} \\ &amp;= (1 - 0,60) \cdot 3,50 AE = 1,40 AE
+ \end{align}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;exampleblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;(2) Bahngeschwindigkeit:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{array}{I} v &amp;amp;= \sqrt{ G \cdot M \cdot \left( \frac{2}{r_P} - \frac{1}{a} \right) } \\
+	 	   &amp;amp;= \sqrt{6,67 \cdot 10^{-11} \frac{m^3}{kg \, s^2} \cdot 1,98 \cdot 10^{30} kg} \cdot \\
+		&amp;amp;	\cdot \sqrt{\left( \frac{2}{1,4 \cdot 1,5 \cdot 10^{11} m} - \frac{1}{3,5 \cdot 1,5 \cdot 10^{11} m} \right) } \\
+		   &amp;amp;= 31 \cdot 10^3 \frac{m}{s} \end{array}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Begründung:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Kepler 2: Wegen des kleineren Abstands (Perihel) muss die Geschwindigkeit größer sein.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Oder Energieerhaltung: Wir setzen \(E_{pot}(r\to\infty)=0\), im Unendlichen hat ein Körper keine potentielle Energie, die Gesamtenergie im Unendlichen ist nur noch die kinetische Energie. Bei der Annäherung an eine Masse wird der Körper angezogen und damit beschleunigt. Damit erhöht sich die kinetische Energie, die potentielle nimmt ab. Folglich muss die Geschwindigkeit im Perihel (nah an der Zentalmasse) am höchsten sein und umgekehrt.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;exampleblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;(3) Umlaufzeit:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;stemblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+\[\begin{align}
+\frac{T_R^2}{r_R^3} &amp;amp;= \frac{4 \pi^2}{G \cdot m_{TG}} \\
+\Rightarrow T_R &amp;amp;= \sqrt{ \frac{4 \pi^2 \cdot r_R^3}{G \cdot m_{TG}} } \\
+&amp;amp; = \sqrt { \frac{4 \pi^2 \cdot (3000m)^3}{6,67 \cdot 10^{-11} \frac{m^3}{kg \, s^2} \cdot 3,35 \cdot 10^{13} kg} }\\
+&amp;amp; = 21800 s = 6,0 h
+\end{align}\]
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>http://username.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>jklein@makeitso.de (Jürgen Klein)</author>
+      <guid>http://username.github.io/page/about/</guid>
+      <description>
+
+&lt;p&gt;My name is Inigo Montoya. I have the following qualities:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I rock a great mustache&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m extremely loyal to my family&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What else do you need?&lt;/p&gt;
+
+&lt;h3 id=&#34;my-history:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;my history&lt;/h3&gt;
+
+&lt;p&gt;To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29&#34;&gt;my movie&lt;/a&gt; and it will answer &lt;strong&gt;all&lt;/strong&gt; your questions.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
